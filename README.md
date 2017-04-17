@@ -7,5 +7,6 @@ Kursen är 8 veckor lång och har som ändamål att introducera er för Android 
 - 4 veckor med en laboration där G-delen görs i grupp och vg-delen enskilt. 
 
 # Läsning och referenser
+- [Android studio](https://developer.android.com/studio/index.html)
 - [Android programming, bok av Big Nerd Ranch](https://http://www.adlibris.com/se/bok/android-programming-9780134706054)
 - [Android developers](https://developer.android.com/)
