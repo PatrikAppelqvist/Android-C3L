@@ -22,7 +22,7 @@ När användaren trycker på knappen så vill jag att ni genom en [explicit inte
 
 ## Utmaning, returnera resultat
 
-Läs på om [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)) och låt SecondActivity returnera någonting till MainActivity.
+Läs på om [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent,int)) och låt SecondActivity returnera någonting till MainActivity.
 
 Tillexempel, låt secondactivity returnera strängen "Hello World From SecondActivity" 
 till MainActivity och visa upp det i en Toast när SecondActivity stängs, vid finish().
