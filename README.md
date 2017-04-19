@@ -10,3 +10,16 @@ Kursen är 8 veckor lång och har som ändamål att introducera er för Android 
 - [Android studio](https://developer.android.com/studio/index.html)
 - [Android programming, bok av Big Nerd Ranch](https://http://www.adlibris.com/se/bok/android-programming-9780134706054)
 - [Android developers](https://developer.android.com/)
+
+# Övningar
+
+## Uppgift dag 1
+
+Jag vill att ni bygger en applikation innehållandes två Activities. 
+Den activity som visas när appen startar ska visa upp en [EditText](https://developer.android.com/reference/android/widget/EditText.html) och en [Button](https://developer.android.com/reference/android/widget/Button.html)
+
+När användaren trycker på knappen så vill jag att ni genom en [explicit intent](https://developer.android.com/guide/components/intents-filters.html) öppnar den andra aktiviteten och där presenterar ett välkomstmeddelande baserat på det som användaren skrivit i EditText-fältet på aktiviteten innan. 
+
+## Utmaning, returnera resultat
+
+Läs på om [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int))
