@@ -1,0 +1,20 @@
+Uppgift dag 1
+
+Jag vill att ni bygger en applikation innehållandes två Activities. 
+Den activity som visas när appen startar ska visa upp en EditText och en Button
+
+När användaren trycker på knappen så vill jag att ni genom en explicit intent öppnar den andra aktiviteten och där presenterar ett 
+välkomstmeddelande baserat på det som användaren skrivit i EditText-fältet på aktiviteten innan. 
+
+Läsning:
+EditText: https://developer.android.com/reference/android/widget/EditText.html
+Button: https://developer.android.com/reference/android/widget/Button.html
+Explicit Intent: https://developer.android.com/guide/components/intents-filters.html
+
+
+Utmaning, returnera resultat
+
+Läs på om startActivityForResult och låt SecondActivity returnera någonting till MainActivity. 
+
+Läsning: 
+startActivityForResult: https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)
