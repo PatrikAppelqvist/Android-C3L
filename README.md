@@ -8,7 +8,7 @@ Kursen är 8 veckor lång och har som ändamål att introducera er för Android 
 
 # Läsning och referenser
 - [Android studio](https://developer.android.com/studio/index.html)
-- [Android programming, bok av Big Nerd Ranch](https://http://www.adlibris.com/se/bok/android-programming-9780134706054)
+- [Android programming, bok av Big Nerd Ranch](https://www.adlibris.com/se/bok/android-programming-9780134706054)
 - [Android developers](https://developer.android.com/)
 
 # Övningar
