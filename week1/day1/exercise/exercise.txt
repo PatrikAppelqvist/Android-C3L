@@ -20,6 +20,8 @@ Tillexempel, låt secondactivity returnera strängen "Hello World From SecondAct
 till MainActivity och visa upp det i en Toast när SecondActivity stängs, vid finish().
 
 Läsning: 
-startActivityForResult: https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)c
-setResult:
-https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)
+startActivityForResult: 
+
+https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)c
+
+https://developer.android.com/training/basics/intents/result.html
