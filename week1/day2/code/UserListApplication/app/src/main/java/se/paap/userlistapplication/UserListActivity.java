@@ -29,7 +29,7 @@ public class UserListActivity extends AppCompatActivity {
         userRepository = new InMemoryUserRepository();
 
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setAdapter(new UserListAdapter(this, userRepository.getUsers()));
+        recyclerView.setAdapter(new UserListAdapter(userRepository.getUsers()));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
@@ -44,6 +44,7 @@ public class UserListActivity extends AppCompatActivity {
         public UserViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             View v = inflater.inflate(R.layout.list_item_user, parent, false);
+            
             return new UserViewHolder(v);
         }
 
