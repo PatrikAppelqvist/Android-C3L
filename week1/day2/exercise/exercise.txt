@@ -1,0 +1,18 @@
+Exercise Day 2
+
+Jag vill att ni återskapar det vi gjorde idag, alltså skapar en aktivitet som innehåller en RecyclerView. RecyclerViewn kommer behöva
+en adapter som i sin tur kommer behöva en ViewHolder. 
+
+Det ska finnas funktionalitet för att lägga till ett item i listan. Detta ska implmenteras genom en menu-resource som ska finnas i AppBar. Om ni vill kunna editera det ni lägger till i listan så låter 
+ni den knapp som lägger till en user öppna en ny aktivitet (startActivityForResult som vi gick igenom på morgonen) som kan skapa en user och skickar tillbaka den genom setResult(). För att skicka tillbaka ett User-objekt kommer kräva att User implementerar interfacet Parcelable. 
+
+Läsning för dagen är:
+- RecyclerView, https://developer.android.com/training/material/lists-cards.html
+- MenuResources, https://developer.android.com/guide/topics/ui/menus.html
+- Parcelable, https://developer.android.com/reference/android/os/Parcelable.html
+- Activity Lifecycle, https://developer.android.com/guide/components/activities/activity-lifecycle.html
+
+Utmaning
+Skapa en till menu-resource som visas när användare long-klickar på ett item i listan. Menyvalen ska då vara delete och edit, dessa ska sen implementera den 
+funktionalitet som meny-valet heter, alltså Ta bort, och updatera ett objekt i data-setet. För det här så kan du ta hjälp av läsningen för MenuResources och 
+även andra resurser som finns på internet. (Finns massor med Android-resurser på nätet).
