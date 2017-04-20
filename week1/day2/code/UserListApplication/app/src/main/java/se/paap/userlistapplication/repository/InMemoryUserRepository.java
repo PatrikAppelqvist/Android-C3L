@@ -9,16 +9,7 @@ import se.paap.userlistapplication.model.User;
 
 public final class InMemoryUserRepository implements UserRepository {
 
-    private final Map<String, User> users;
-
-    public InMemoryUserRepository() {
-        this.users = new HashMap<>();
-
-        for(int i = 0; i < 1000; i++) {
-            User user = new User("Username" + i, i * 3);
-            users.put(user.getId(), user);
-        }
-    }
+    private static final Map<String, User> users = new HashMap<>();
 
     @Override
     public List<User> getUsers() {

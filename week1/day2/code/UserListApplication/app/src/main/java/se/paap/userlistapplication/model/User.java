@@ -21,6 +21,10 @@ public final class User {
         return age;
     }
 
+    public String getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -46,9 +50,5 @@ public final class User {
         int result = username.hashCode();
         result = 31 * result + age;
         return result;
-    }
-
-    public String getId() {
-        return id;
     }
 }
