@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MySolutionExercise1</string>
+    <string name="result_message">Hello from second activity</string>
+    <string name="write_message">Write message</string>
+    <string name="btn_send_message">Send message</string>
+    <string name="btn_send_message_back">Send message back</string>
+</resources>
