@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }
-
-    @Override
-    public void onClick(View v) {
-
     }
 
     private static class ExampleAdapter extends RecyclerView.Adapter<ExampleViewHolder> {
