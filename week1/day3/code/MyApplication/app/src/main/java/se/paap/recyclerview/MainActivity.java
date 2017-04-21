@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         List<String> strings = new ArrayList<>();
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < 1000; i++) {
             strings.add("Hejsan " + i);
         }
 
