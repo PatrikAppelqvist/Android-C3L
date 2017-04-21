@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UserListApplication</string>
+    <string name="action_add">Add user</string>
+    <string name="edit_username_label">Username</string>
+    <string name="edit_age_label">Age</string>
+    <string name="btn_edit_user">Edit user</string>
+    <string name="btn_add_user">Add user</string>
+    <string name="action_edit_user">Edit user</string>
+    <string name="action_remove_user">Remove user</string>
+</resources>
