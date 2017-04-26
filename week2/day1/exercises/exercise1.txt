@@ -1,0 +1,9 @@
+Övning Fragment
+- Bygg en applikation som har två aktiviteter. En mastervy som innehåller en recyclerview med flera items, och en detaljvy innehållande detaljer för ett item.
+- Båda Aktiviteterna ska innehålla ett fragment som vy. 
+- När användaren klickar på ett item, så ska detaljvyn öppnas för just det itemet som användaren har klickat på. 
+- När användaren klickar back, så ska Recyclerviewn visas igen.
+
+Utmaning:
+- Genom att läsa på om Viewpager: https://developer.android.com/training/animation/screen-slide.html, försök att implementera en viewpager på er detaljvy. (Lägg till viewpager i fragment-vyn)
+- Genom att läsa på om Resources: https://developer.android.com/guide/topics/resources/providing-resources.html, försök att implementera en Aktivitet som, om bredden på devicen är större än 600dp, visar lista och detaljvy i samma aktivitet.
