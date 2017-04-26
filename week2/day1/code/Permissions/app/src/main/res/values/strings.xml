@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permissions</string>
+    <string name="read_contacts_rationale_title">Read contacts</string>
+    <string name="read_contacts_rationale_message">We want all your contacts to sell...</string>
+</resources>

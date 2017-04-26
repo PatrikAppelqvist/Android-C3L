@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SolutionFragmentsExercise</string>
+    <string name="fragment_detail_instruction">Pick a contact in the list to view details.</string>
+</resources>
