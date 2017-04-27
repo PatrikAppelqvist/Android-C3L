@@ -82,6 +82,7 @@ public class IntentActivity extends AppCompatActivity {
         if(requestCode == REQUEST_CODE_CAMERA) {
             if(resultCode == RESULT_OK) {
                 Bitmap image = (Bitmap) data.getExtras().get("data");
+
                 imageView.setImageBitmap(image);
                 imageView.setVisibility(View.VISIBLE);
 

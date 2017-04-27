@@ -6,9 +6,9 @@
     <string name="prefs_color_default">blue</string>
     <string name="prefs_color_key">color_key</string>
     <string name="prefs_color_title">Text color</string>
-    <string name="prefs_color_red_entry">Red</string>
-    <string name="prefs_color_blue_entry">Blue</string>
-    <string name="prefs_color_green_entry">Green</string>
+    <string name="prefs_color_red_entry">Red Text</string>
+    <string name="prefs_color_blue_entry">Blue Text</string>
+    <string name="prefs_color_green_entry">Green Text</string>
     <string name="prefs_color_red_value">red</string>
     <string name="prefs_color_blue_value">blue</string>
     <string name="prefs_color_green_value">green</string>
