@@ -12,6 +12,10 @@
     <string name="prefs_color_red_value">red</string>
     <string name="prefs_color_blue_value">blue</string>
     <string name="prefs_color_green_value">green</string>
+    <string name="prefs_show_message_key">show_message</string>
+    <string name="prefs_show_message_on">Yes</string>
+    <string name="prefs_show_message_off">No</string>
+    <string name="prefs_show_message_title">Show message</string>
     <string name="action_settings">Settings</string>
     <string name="activity_main_title">MainActivity</string>
     <string name="activity_settings_title">Settings</string>

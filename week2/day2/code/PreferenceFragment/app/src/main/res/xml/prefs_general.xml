@@ -14,4 +14,11 @@
         android:entryValues="@array/prefs_color_values"
         android:title="@string/prefs_color_title" />
 
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/prefs_show_message_key"
+        android:summaryOn="@string/prefs_show_message_on"
+        android:summaryOff="@string/prefs_show_message_off"
+        android:title="@string/prefs_show_message_title" />
+
 </PreferenceScreen>

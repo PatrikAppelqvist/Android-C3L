@@ -7,6 +7,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.TwoStatePreference;
 
 public final class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
     @Override
@@ -24,7 +25,6 @@ public final class SettingsFragment extends PreferenceFragmentCompat implements 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
         getPreferenceScreen().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
     }
 
@@ -34,7 +34,7 @@ public final class SettingsFragment extends PreferenceFragmentCompat implements 
         for(int i = 0; i < count; i++) {
             Preference preference = preferenceScreen.getPreference(i);
 
-            if(!(preference instanceof CheckBoxPreference)) {
+            if(!(preference instanceof TwoStatePreference)) {
                 String value = sharedPreferences.getString(preference.getKey(), "");
                 setPreferenceSummary(preference, value);
             }
