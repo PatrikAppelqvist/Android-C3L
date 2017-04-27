@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="se.paap.implicitintents.IntentActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/activity_intent_content_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:text="@string/activity_intent_btn_share"
+            android:id="@+id/btn_share"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="@string/activity_intent_btn_camera"
+            android:id="@+id/btn_camera"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="@string/activity_intent_btn_maps"
+            android:id="@+id/btn_maps"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

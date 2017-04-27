@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImplicitIntents</string>
+    <string name="activity_intent_content_description">Photo</string>
+    <string name="activity_intent_btn_share">Share text</string>
+    <string name="activity_intent_btn_maps">Open map</string>
+    <string name="activity_intent_btn_camera">Take photo</string>
+</resources>
