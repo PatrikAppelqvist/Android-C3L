@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -79,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.image_view);
     }
 
+    private void readImageFromFile() {
+        File imageFile = new File(getFilesDir(), "image.png");
+        Log.d(TAG, "readImageFromFile: " + imageFile.getAbsolutePath());
+        Bitmap image = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
+        imageView.setImageBitmap(image);
+        imageView.setVisibility(View.VISIBLE);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == REQUEST_CODE_CAMERA) {
@@ -89,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
                 imageView.setVisibility(View.VISIBLE);
 
                 // TODO: SAVE IMAGE TO FILE
+                File imageFile = new File(getFilesDir(), "image.png");
+                try {
+                    image.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(imageFile));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
