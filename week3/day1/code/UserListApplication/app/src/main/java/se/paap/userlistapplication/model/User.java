@@ -1,12 +1,9 @@
 package se.paap.userlistapplication.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+public final class User {
+    private static final long DEFAULT_ID = -1;
 
-public final class User implements Parcelable {
-        private static final int DEFAULT_ID = -1;
-
-        private final String username;
+    private final String username;
         private final int age;
         private final long id;
 
@@ -18,12 +15,6 @@ public final class User implements Parcelable {
 
         public User(String username, int age) {
             this(DEFAULT_ID, username, age);
-        }
-
-        private User(Parcel in) {
-            username = in.readString();
-            age = in.readInt();
-            id = in.readLong();
         }
 
         public boolean hasBeenPersisted() {
@@ -40,30 +31,6 @@ public final class User implements Parcelable {
 
         public long getId() {
             return id;
-        }
-
-        public static final Creator<User> CREATOR = new Creator<User>() {
-            @Override
-            public User createFromParcel(Parcel in) {
-                return new User(in);
-            }
-
-            @Override
-            public User[] newArray(int size) {
-                return new User[size];
-            }
-        };
-
-        @Override
-        public int describeContents() {
-            return 0;
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            dest.writeString(this.username);
-            dest.writeInt(this.age);
-            dest.writeLong(this.id);
         }
 
         @Override

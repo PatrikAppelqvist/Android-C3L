@@ -72,13 +72,6 @@ public class UserListActivity extends AppCompatActivity implements UserListFragm
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        userRepository.close();
-    }
-
-    @Override
     public void onItemClicked(User user) {
         openEditUserActivity(user);
     }
@@ -86,7 +79,6 @@ public class UserListActivity extends AppCompatActivity implements UserListFragm
     @Override
     public void onItemRemoved(int position, long id) {
         userRepository.removeUser(id);
-        userListView.updateDataSet();
     }
 
     @Override

@@ -15,8 +15,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import se.paap.userlistapplication.model.User;
-import se.paap.userlistapplication.repository.UserRepository;
-import se.paap.userlistapplication.repository.inMemory.InMemoryUserRepository;
 
 public class UserListFragment extends Fragment {
 
@@ -27,7 +25,7 @@ public class UserListFragment extends Fragment {
     }
 
     private Callbacks callbacks;
-    private RecyclerView recyclerView;
+    private UserListAdapter adapter;
 
     @Nullable
     @Override
@@ -44,15 +42,27 @@ public class UserListFragment extends Fragment {
                     @Override
                     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                         final long id = viewHolder.getItemId();
-                        callbacks.onItemRemoved(viewHolder.getAdapterPosition(), id);
+                        final int position = viewHolder.getAdapterPosition();
+                        callbacks.onItemRemoved(position, id);
+
+                        updateAdapter();
                     }
                 });
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        itemTouchHelper.attachToRecyclerView(recyclerView);
+        final List<User> users = callbacks.getDataSet();
+        adapter = new UserListAdapter(users);
+        adapter.setOnItemClickedListener(new UserListAdapter.OnItemClickedListener() {
+            @Override
+            public void onItemClicked(User user) {
+                callbacks.onItemClicked(user);
+            }
+        });
 
-        updateAdapter();
+        final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        itemTouchHelper.attachToRecyclerView(recyclerView);
 
         return view;
     }
@@ -69,15 +79,8 @@ public class UserListFragment extends Fragment {
     }
 
     private void updateAdapter() {
-        UserListAdapter adapter = new UserListAdapter(callbacks.getDataSet());
-        adapter.setOnItemClickedListener(new UserListAdapter.OnItemClickedListener() {
-            @Override
-            public void onItemClicked(User user) {
-                callbacks.onItemClicked(user);
-            }
-        });
-
-        recyclerView.setAdapter(adapter);
+        adapter.setItems(callbacks.getDataSet());
+        adapter.notifyDataSetChanged();
     }
 
     public void updateDataSet() {
@@ -85,7 +88,7 @@ public class UserListFragment extends Fragment {
     }
 
     private static class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
-        private final List<User> users;
+        private List<User> users;
         private OnItemClickedListener listener;
 
         UserListAdapter(List<User> users) {
@@ -96,6 +99,10 @@ public class UserListFragment extends Fragment {
 
         void setOnItemClickedListener(OnItemClickedListener listener) {
             this.listener = listener;
+        }
+
+        void setItems(List<User> users) {
+            this.users = users;
         }
 
         @Override

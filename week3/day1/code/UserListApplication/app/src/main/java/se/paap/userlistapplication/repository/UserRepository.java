@@ -9,5 +9,4 @@ public interface UserRepository {
     User getUser(long id);
     long addOrUpdateUser(User user);
     User removeUser(long id);
-    void close();
 }

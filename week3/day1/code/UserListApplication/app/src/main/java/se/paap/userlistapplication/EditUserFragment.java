@@ -87,7 +87,7 @@ public final class EditUserFragment extends Fragment implements TextWatcher {
             ageEditText.setText(String.valueOf(user.getAge()));
             button.setText(getString(R.string.btn_edit_user));
         } else {
-            button.setText(getString(R.string.btn_add_user));
+            button.setText(getString(R.string.action_add_user));
             button.setEnabled(false);
         }
 
