@@ -56,7 +56,7 @@ public final class EditUserFragment extends Fragment implements TextWatcher {
 
         ageEditText.addTextChangedListener(this);
 
-        ageEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        ageEditText.setOnEditorActionListener(new EditText.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if((event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER) || actionId == EditorInfo.IME_ACTION_DONE) {

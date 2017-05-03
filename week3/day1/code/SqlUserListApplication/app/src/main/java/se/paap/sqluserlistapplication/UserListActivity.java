@@ -14,6 +14,7 @@ import java.util.List;
 import se.paap.sqluserlistapplication.model.User;
 import se.paap.sqluserlistapplication.repository.UserRepository;
 import se.paap.sqluserlistapplication.repository.inMemory.InMemoryUserRepository;
+import se.paap.sqluserlistapplication.repository.sql.SqlUserRepository;
 
 public class UserListActivity extends AppCompatActivity implements UserListFragment.Callbacks {
     private static final String TAG = "UserListActivity";
@@ -30,7 +31,7 @@ public class UserListActivity extends AppCompatActivity implements UserListFragm
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_user_list_container);
 
-        userRepository = new InMemoryUserRepository();
+        userRepository = SqlUserRepository.getInstance(this);
 
         if(fragment == null) {
             fragment = new UserListFragment();

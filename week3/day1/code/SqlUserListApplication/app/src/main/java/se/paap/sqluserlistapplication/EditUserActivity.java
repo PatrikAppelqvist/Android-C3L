@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import se.paap.sqluserlistapplication.model.User;
 import se.paap.sqluserlistapplication.repository.UserRepository;
 import se.paap.sqluserlistapplication.repository.inMemory.InMemoryUserRepository;
+import se.paap.sqluserlistapplication.repository.sql.SqlUserRepository;
 
 public class EditUserActivity extends AppCompatActivity implements EditUserFragment.Callbacks {
     private static final String EXTRA_USER_ID = "user_id";
@@ -31,7 +32,7 @@ public class EditUserActivity extends AppCompatActivity implements EditUserFragm
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        userRepository = new InMemoryUserRepository();
+        userRepository = SqlUserRepository.getInstance(this);
 
         Intent intent = getIntent();
         final long id = intent.getLongExtra(EXTRA_USER_ID, -1);

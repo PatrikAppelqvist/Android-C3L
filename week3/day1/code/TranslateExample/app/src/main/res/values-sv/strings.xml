@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TranslateExample</string>
+    <string name="edit_username_label">Användarnamn</string>
+    <string name="edit_age_label">Age</string>
+    <string name="btn_edit_user">Edit user</string>
+    <string name="action_add_user">Add user</string>
+    <string name="action_edit_user">Edit user</string>
+    <string name="action_remove_user">Remove user</string>
+</resources>
