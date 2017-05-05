@@ -5,6 +5,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+
+// API-KEY: 97d62cc8aa88bdc982daf588c0ea8d8f
+
 public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     @Override
