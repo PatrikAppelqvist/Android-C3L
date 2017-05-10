@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginMvp</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="login_btn">Sign in</string>
+    <string name="welcome_message">Welcome</string>
+    <string name="error_message_password">Bad username</string>
+    <string name="error_message_username">Bad password</string>
+</resources>
