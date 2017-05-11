@@ -1,0 +1,11 @@
+homeBackground: #e6e6e6
+primaryOrange: #ffa000
+lighterOrange: #FCE4BD
+primaryOrangeDark: #c67100
+primaryGray: #979797
+lighterGray: #CBCBCB
+primaryGreen: #7ED321
+lighterGreen: #D8F1BC
+primaryBlue: #5F45FF
+lighterBlue: #CFC7FF
+
