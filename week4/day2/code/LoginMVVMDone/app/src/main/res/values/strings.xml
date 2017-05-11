@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginMVVMDone</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Sign in</string>
+    <string name="welcome_message">Welcome</string>
+    <string name="username_error">Bad username</string>
+    <string name="password_error">Bad password</string>
+</resources>
