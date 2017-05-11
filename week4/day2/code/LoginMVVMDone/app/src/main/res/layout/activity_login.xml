@@ -1,42 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:padding="32dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ProgressBar
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="32dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible" />
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.patrik.loginmvvmdone.login.LoginViewModel" />
+    </data>
 
-    <LinearLayout
-        android:layout_gravity="center"
+    <FrameLayout android:padding="32dp"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:hint="@string/hint_username"
-            android:inputType="text"
-            android:layout_marginBottom="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
+        <ProgressBar
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="32dp"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:visibility="@{viewModel.loading}" />
+
+        <LinearLayout
             android:layout_gravity="center"
-            android:text="@string/btn_login"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <TextView
+                android:text="@{viewModel.username}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-</FrameLayout>
+            <EditText
+                android:hint="@string/hint_username"
+                android:inputType="text"
+                android:text="@={viewModel.username}"
+                app:error="@{viewModel.usernameError}"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:text="@={viewModel.password}"
+                app:error="@{viewModel.passwordError}"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="@{() -> viewModel.login()}"
+                android:text="@string/btn_login"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

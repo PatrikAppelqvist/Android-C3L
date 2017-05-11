@@ -8,7 +8,10 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     public static Intent createIntent(Context context) {
-        return new Intent(context, MainActivity.class);
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        return intent;
     }
 
     @Override
